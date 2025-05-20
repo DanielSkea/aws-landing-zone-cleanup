@@ -2,15 +2,15 @@ name: AWS Landing Zone Cleanup
 
 on:
   schedule:
-    - cron: '0 0 * * *'     # Every day at midnight UTC
-  workflow_dispatch:         # Manual trigger option
+    - cron: '0 0 * * *'     
+  workflow_dispatch:         
 
 jobs:
   cleanup:
     runs-on: ubuntu-latest
 
     env:
-      AWS_REGION: us-east-1   # Change to your preferred region
+      AWS_REGION: us-east-1   
 
     steps:
     - name: Checkout repo
